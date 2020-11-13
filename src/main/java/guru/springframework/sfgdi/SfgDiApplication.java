@@ -1,9 +1,6 @@
 package guru.springframework.sfgdi;
 
-import guru.springframework.sfgdi.controllers.ConstructorInjectedController;
-import guru.springframework.sfgdi.controllers.MyController;
-import guru.springframework.sfgdi.controllers.PropertyInjectedController;
-import guru.springframework.sfgdi.controllers.SetterInjectedController;
+import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.services.GreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -36,6 +33,10 @@ public class SfgDiApplication {
 		System.out.println("--- DI using Constructor ---");
 		ConstructorInjectedController cc = (ConstructorInjectedController)ctx.getBean("constructorInjectedController");
 		System.out.println(cc.getGreeting());
+
+		System.out.println("--- DI using Constructor with defined Primary Bean ---");
+		PrimaryController prim = (PrimaryController)ctx.getBean("primaryController");
+		System.out.println(prim.getGreeting());
 
 		System.out.println("---");
 		GreetingService gc = (GreetingService)ctx.getBean("johnGreetingServiceImpl");
