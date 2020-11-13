@@ -38,7 +38,7 @@ public class SfgDiApplication {
 		System.out.println(cc.getGreeting());
 
 		System.out.println("---");
-		GreetingService gc = (GreetingService)ctx.getBean("greetingServiceImpl");
+		GreetingService gc = (GreetingService)ctx.getBean("johnGreetingServiceImpl");
 		System.out.println(gc.sayGreeting());
  	}
 

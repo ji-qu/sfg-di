@@ -3,9 +3,9 @@ package guru.springframework.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class JohnGreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello John";
     }
 }
