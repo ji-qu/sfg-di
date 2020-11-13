@@ -18,7 +18,7 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
-		MyController myC = (MyController)ctx.getBean("myController");
+		MyController myC = (MyController)ctx.getBean("customName");
 		String greeting = myC.sayHello();
 		System.out.println(greeting);
 
@@ -37,6 +37,10 @@ public class SfgDiApplication {
 		System.out.println("--- DI using Constructor with defined Primary Bean ---");
 		PrimaryController prim = (PrimaryController)ctx.getBean("primaryController");
 		System.out.println(prim.getGreeting());
+
+		System.out.println("---");
+		I18nController ic = (I18nController)ctx.getBean("i18nController");
+		System.out.println(ic.getGreeting());
 
 		System.out.println("---");
 		GreetingService gc = (GreetingService)ctx.getBean("johnGreetingServiceImpl");

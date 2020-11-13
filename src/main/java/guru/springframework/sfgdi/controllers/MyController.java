@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 Controller pro ukazku, jak rucne ziskat komponentu ze Spring contextu (v SfgDiApplication)
  */
 
-@Controller
+@Controller("customName")
 public class MyController {
 
     public String sayHello() {
